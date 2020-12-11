@@ -204,8 +204,12 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(input,  a):
-	return ""
-
+	middle = (len(input) + 1) / 2
+	x = middle - (a-1)/2
+	output = list(input)
+	for i in range(a):
+		output.pop(int(x)-1)
+	return "".join(output)
 	# <QUESTION 9>
 
     # Given two string inputs, if one can be made from the other return the boolean True, if not return the boolean False.
@@ -221,8 +225,17 @@ def eight(input,  a):
 	# There are no hints for this question.
 
 def nine(string1, string2):
-    return False
-
+	if len(string1) >= len(string2):
+		input1 = string1
+		input2 = string2
+	else: 
+		input2 = string1
+		input1 = string2
+	print(input1,input2)
+	for i in input2:
+		if i not in input1:
+			return False
+	return True 
 	# <QUESTION 10>
 
     # Write a function which takes 2 integers greater than 0, X,Y as input and generates a 2-dimensional array. 
@@ -239,4 +252,10 @@ def nine(string1, string2):
 	# Think about nesting for loops.
 
 def ten(X,Y):
-	return []
+	list1 = []
+	for i in range(Y):
+		list2 = []
+		for j in range(X):
+			list2.append(i*j)
+		list1.append(list2)
+	return list1
