@@ -1,3 +1,4 @@
+from random import randint
 	# INSTRUCTIONS
 
 	# In case it is not clear, the Question appears first, then examples, then any hints and finally the function that you need to complete appears underneath:
@@ -74,8 +75,10 @@ def two(input):
 	# What happens if you multiply a string by a number?
 
 def three(a):
-	return 1
-
+	a2 = int(str(a)*2)
+	a3 = int(str(a)*3)
+	a4 = int(str(a)*4)
+	return a + a2 + a3 + a4
 	# <QUESTION 4>
 
     # Given two Strings of equal length, 'merge' them into one String.
@@ -103,7 +106,8 @@ def three(a):
 	# How would you seperate a string into characters?
 
 def four(input1, input2):
-	return ""
+        
+	return ''.join(''.join(x) for x in zip(input1,input2))
 
 	# <QUESTION 5>
 
@@ -120,7 +124,14 @@ def four(input1, input2):
 	# The random module contains a function called randint.
 
 def five():
-    return []
+	output = []
+	while len(output) < 5:
+		x = randint(100,201)
+		if x % 2 == 0: 
+			output.append(x)
+    
+	return output
+
 
 	# <QUESTION 6>
 
