@@ -150,7 +150,12 @@ def five():
 	# There are no hints for this question.
     
 def six(input):
-	return False
+	input = input.lower()
+	if input[-2] == "p" and input[-1] == "y":
+		print(input[-2], input[-1])
+		return True
+	else:
+		return False
 
 	# <QUESTION 7>
 
@@ -174,7 +179,14 @@ def six(input):
 	# Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-	return False
+	input = [a, b, c]
+	input.sort()
+	a = input[1] - input[0]
+	b = input[2] - input[1]
+	if a == b:
+		return True
+	else:
+		return False
 
 	# <QUESTION 8>
 
